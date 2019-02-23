@@ -29,7 +29,7 @@ public class Calculator {
 	 * Method that returns the current value of total and has no parameters.
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
@@ -39,7 +39,7 @@ public class Calculator {
 	 * @param  value  is an integer that is to be added to "total"
 	 */
 	public void add (int value) {
-		
+		total += value;
 	}
 	
 	/**
@@ -49,7 +49,7 @@ public class Calculator {
 	 * @param  value  is an integer that is to be subtracted from "total"
 	 */
 	public void subtract (int value) {
-		
+		total -= value;
 	}
 	
 	/**
@@ -59,7 +59,7 @@ public class Calculator {
 	 * @param  value  is an integer that that will be used to multiply "total"
 	 */
 	public void multiply (int value) {
-		
+		total *= value;
 	}
 	
 	/**
@@ -69,7 +69,12 @@ public class Calculator {
 	 * @param  value  is an integer that that will be used to multiply "total"
 	 */
 	public void divide (int value) {
-		
+		if (value == 0) {
+			total = 0;
+		}
+		else {
+			total /= value;
+		}
 	}
 	
 	/**
